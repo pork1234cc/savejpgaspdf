@@ -1,0 +1,47 @@
+/* 全局样式 */ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 31, 41, 55;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+@layer components {
+  .cyberpunk-border {
+    @apply relative border border-primary/50 rounded-md overflow-hidden;
+    @apply before:absolute before:inset-0 before:p-[1px] before:rounded-md;
+    @apply before:bg-gradient-to-r before:from-primary before:to-secondary;
+    @apply before:pointer-events-none;
+    @apply animate-glow;
+    position: relative;
+  }
+  
+  .cyberpunk-border::before {
+    content: "";
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+  }
+  
+  .flow-bg {
+    @apply bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_100%];
+    @apply animate-flow;
+  }
+  
+  .tech-card {
+    @apply bg-dark-lighter/70 backdrop-blur-sm rounded-lg p-4;
+    @apply border border-primary/20 shadow-lg;
+  }
+} 

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # 站点地图位置
-Sitemap: https://https://howtosavejpgaspdf.online/sitemap.xml
+Sitemap: https://howtosavejpgaspdf.online/sitemap.xml
 
 # 禁止爬虫访问的路径
 Disallow: /api/ 

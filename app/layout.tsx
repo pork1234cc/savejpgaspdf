@@ -30,6 +30,24 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <GoogleAnalytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "How to Save JPG as PDF",
+              "applicationCategory": "Productivity",
+              "operatingSystem": "Any",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "description": "Free online tool to convert JPG/PNG/WEBP and other image formats to PDF, with batch processing and smart sorting while preserving original quality"
+            })
+          }}
+        />
       </head>
       <body className={inter.className}>
         <main className="min-h-screen">
